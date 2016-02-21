@@ -1,5 +1,5 @@
 import unittest
-from BL.StringCreator import Expand
+from BL.StringCreator import expand
 
 
 class ExpandTestCases(unittest.TestCase):
@@ -16,7 +16,7 @@ class ExpandTestCases(unittest.TestCase):
         expected_value = [['']]
 
         'Act'
-        current_value = Expand(value)
+        current_value = expand(value)
 
         'Assert'
         self.assertEqual(1, len(current_value))
@@ -33,7 +33,7 @@ class ExpandTestCases(unittest.TestCase):
         expected_value = [['B']]
 
         'Act'
-        current_value = Expand(value)
+        current_value = expand(value)
 
         'Assert'
         self.assertEqual(1, len(current_value))
@@ -50,7 +50,7 @@ class ExpandTestCases(unittest.TestCase):
         expected_value = [['A']]
 
         'Act'
-        current_value = Expand(value)
+        current_value = expand(value)
 
         'Assert'
         self.assertEqual(1, len(current_value))
@@ -67,7 +67,7 @@ class ExpandTestCases(unittest.TestCase):
         expected_value = [['A', 'B'], ['B', 'A']]
 
         'Act'
-        current_value = Expand(value)
+        current_value = expand(value)
 
         'Assert'
         self.assertEqual(expected_value, current_value)
