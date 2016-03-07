@@ -9,17 +9,21 @@ def CreateString(n, k):
     candidates = SortedListWithKey(key=h.evaluate_node)
     candidates.add(char_list)
 
-    candidate = candidates.pop(0)
-    punctuation = h.evaluate_node(candidate)
-    if punctuation == 0:
-        return ''.join(candidate)
-    else:
-        if punctuation == 99999:
-            return ''
+    while True:
+        try:
+            candidate = candidates.pop(0)
+            punctuation = h.evaluate_node(candidate)
+            if punctuation == 0:
+                return ''.join(candidate)
+            else:
+                if punctuation == 99999:
+                    return ''
 
-    l = expand(candidate)
-    for expanded in l:
-        candidates.add(expanded)
+            l = expand(candidate)
+            for expanded in l:
+                candidates.add(expanded)
+        except IndexError:
+            return ''
 
 
 def expand(value):

@@ -2,6 +2,7 @@
 
 import getopt
 import sys
+from BL.StringCreator import CreateString
 
 
 def main(argv):
@@ -32,13 +33,15 @@ def main(argv):
                 print 'The -k parameter should be a number'
                 sys.exit(2)
 
-            if any([k < 0, k < (1 + (n * ((n - 1) / 2)))]):
+            if any([k < 0, k >= (1 + (n * ((n - 1) / 2)))]):
                 print 'k shoul be positive and lower than (1 + (n * ((n - 1)/2)))'
                 sys.exit()
 
     print 'n: ', n
     print 'k: ', k
 
+    result = CreateString(n, k)
+    print 'Resultado: ' + result
 
 if __name__ == "__main__":
     main(sys.argv[1:])
