@@ -9,21 +9,24 @@ def CreateString(n, k):
     candidates = SortedListWithKey(key=h.evaluate_node)
     candidates.add(char_list)
 
-    while True:
+    altura = 0
+    while altura < k+1:
         try:
             candidate = candidates.pop(0)
             punctuation = h.evaluate_node(candidate)
             if punctuation == 0:
                 return ''.join(candidate)
-            else:
-                if punctuation == 99999:
-                    return ''
 
             l = expand(candidate)
             for expanded in l:
-                candidates.add(expanded)
+                punctuation = h.evaluate_node(expanded)
+                if punctuation >= 0:
+                    candidates.add(expanded)
+
+            altura += 1
         except IndexError:
             return ''
+    return ''
 
 
 def expand(value):
