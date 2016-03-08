@@ -1,8 +1,8 @@
 import unittest
-from Tests.BL import EvaluateTests, ExpandTest
+from Tests.BL import EvaluateTests, ExpandTest, CreateStringTest
 
 if __name__ == '__main__':
-    test_classes_to_run = [EvaluateTests, ExpandTest]
+    test_classes_to_run = [EvaluateTests, ExpandTest, CreateStringTest]
     loader = unittest.TestLoader()
 
     suites = []
