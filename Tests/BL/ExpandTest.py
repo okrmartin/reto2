@@ -11,14 +11,14 @@ class ExpandTestCases(unittest.TestCase):
         the expected value should be ['']
         """
 
-        'Arrange'
+        # Arrange
         value = ['']
         expected_value = [['']]
 
-        'Act'
+        # Act
         current_value = expand(value)
 
-        'Assert'
+        # Assert
         self.assertEqual(1, len(current_value))
         self.assertEqual(expected_value, current_value)
 
@@ -28,14 +28,14 @@ class ExpandTestCases(unittest.TestCase):
         the expected value should be ['B']
         """
 
-        'Arrange'
+        # Arrange
         value = ['A']
         expected_value = [['B']]
 
-        'Act'
+        # Act
         current_value = expand(value)
 
-        'Assert'
+        # Assert
         self.assertEqual(1, len(current_value))
         self.assertEqual(expected_value, current_value)
 
@@ -45,14 +45,14 @@ class ExpandTestCases(unittest.TestCase):
         the expected value should be ['A']
         """
 
-        'Arrange'
+        # Arrange
         value = ['B']
         expected_value = [['A']]
 
-        'Act'
+        # Act
         current_value = expand(value)
 
-        'Assert'
+        # Assert
         self.assertEqual(1, len(current_value))
         self.assertEqual(expected_value, current_value)
 
@@ -62,12 +62,12 @@ class ExpandTestCases(unittest.TestCase):
         the expected value should be [['A', 'B'], ['B', 'A']]
         """
 
-        'Arrange'
+        # Arrange
         value = ['A', 'A']
         expected_value = [['A', 'B'], ['B', 'A']]
 
-        'Act'
+        # Act
         current_value = expand(value)
 
-        'Assert'
+        # Assert
         self.assertEqual(expected_value, current_value)

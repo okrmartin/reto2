@@ -8,14 +8,14 @@ class EvaluateTestCases(unittest.TestCase):
         When the string list is '['A']' the number of pairs should be 0
         """
 
-        'Arrange'
+        # Arrange
         string_list = ['A']
         expected_value = 0
 
-        'Act'
+        # Act
         current_value = Strategy.obtain_pairs_number(string_list)
 
-        'Assert'
+        # Assert
         self.assertEqual(expected_value, current_value)
 
     def test_WhenEvaluateB_ItShouldBe0(self):
@@ -24,14 +24,14 @@ class EvaluateTestCases(unittest.TestCase):
         :return:
         """
 
-        'Arrange'
+        # Arrange
         string_list = ['B']
         expected_value = 0
 
-        'Act'
+        # Act
         current_value = Strategy.obtain_pairs_number(string_list)
 
-        'Assert'
+        # Assert
         self.assertEqual(expected_value, current_value)
 
     def test_WhenEvaluateAB_ItShouldBe1(self):
@@ -40,14 +40,14 @@ class EvaluateTestCases(unittest.TestCase):
         :return:
         """
 
-        'Arrange'
+        # Arrange
         string_list = ['A', 'B']
         expected_value = 1
 
-        'Act'
+        # Act
         current_value = Strategy.obtain_pairs_number(string_list)
 
-        'Assert'
+        # Assert
         self.assertEqual(expected_value, current_value)
 
     def test_WhenEvaluateBA_ItShouldBe0(self):
@@ -56,14 +56,14 @@ class EvaluateTestCases(unittest.TestCase):
         :return:
         """
 
-        'Arrange'
+        # Arrange
         string_list = ['B', 'A']
         expected_value = 0
 
-        'Act'
+        # Act
         current_value = Strategy.obtain_pairs_number(string_list)
 
-        'Assert'
+        # Assert
         self.assertEqual(expected_value, current_value)
 
     def test_WhenEvaluateBAB_ItShouldBe1(self):
@@ -72,14 +72,14 @@ class EvaluateTestCases(unittest.TestCase):
         :return:
         """
 
-        'Arrange'
+        # Arrange
         string_list = ['B', 'A', 'B']
         expected_value = 1
 
-        'Act'
+        # Act
         current_value = Strategy.obtain_pairs_number(string_list)
 
-        'Assert'
+        # Assert
         self.assertEqual(expected_value, current_value)
 
     def test_WhenEvaluateBABB_ItShouldBe2(self):
@@ -88,14 +88,14 @@ class EvaluateTestCases(unittest.TestCase):
         :return:
         """
 
-        'Arrange'
+        # Arrange
         string_list = ['B', 'A', 'B', 'B']
         expected_value = 2
 
-        'Act'
+        # Act
         current_value = Strategy.obtain_pairs_number(string_list)
 
-        'Assert'
+        # Assert
         self.assertEqual(expected_value, current_value)
 
     def test_WhenEvaluateBABBA_ItShouldBe2(self):
@@ -104,14 +104,14 @@ class EvaluateTestCases(unittest.TestCase):
         :return:
         """
 
-        'Arrange'
+        # Arrange
         string_list = ['B', 'A', 'B', 'B', 'A']
         expected_value = 2
 
-        'Act'
+        # Act
         current_value = Strategy.obtain_pairs_number(string_list)
 
-        'Assert'
+        # Assert
         self.assertEqual(expected_value, current_value)
 
     def test_WhenEvaluateBABBAAB_ItShouldBe5(self):
@@ -120,12 +120,12 @@ class EvaluateTestCases(unittest.TestCase):
         :return:
         """
 
-        'Arrange'
+        # Arrange
         string_list = ['B', 'A', 'B', 'B', 'A', 'A', 'B']
         expected_value = 5
 
-        'Act'
+        # Act
         current_value = Strategy.obtain_pairs_number(string_list)
 
-        'Assert'
+        # Assert
         self.assertEqual(expected_value, current_value)
