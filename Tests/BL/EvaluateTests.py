@@ -1,5 +1,6 @@
 import unittest
-from BL.StringCreator import  obtain_pairs_number
+from BL.strategy import Strategy
+
 
 class EvaluateTestCases(unittest.TestCase):
     def test_WhenEvaluateA_ItShouldBe0(self):
@@ -12,7 +13,7 @@ class EvaluateTestCases(unittest.TestCase):
         expected_value = 0
 
         'Act'
-        current_value = obtain_pairs_number(string_list)
+        current_value = Strategy.obtain_pairs_number(string_list)
 
         'Assert'
         self.assertEqual(expected_value, current_value)
@@ -28,7 +29,7 @@ class EvaluateTestCases(unittest.TestCase):
         expected_value = 0
 
         'Act'
-        current_value = obtain_pairs_number(string_list)
+        current_value = Strategy.obtain_pairs_number(string_list)
 
         'Assert'
         self.assertEqual(expected_value, current_value)
@@ -44,7 +45,7 @@ class EvaluateTestCases(unittest.TestCase):
         expected_value = 1
 
         'Act'
-        current_value = obtain_pairs_number(string_list)
+        current_value = Strategy.obtain_pairs_number(string_list)
 
         'Assert'
         self.assertEqual(expected_value, current_value)
@@ -60,7 +61,7 @@ class EvaluateTestCases(unittest.TestCase):
         expected_value = 0
 
         'Act'
-        current_value = obtain_pairs_number(string_list)
+        current_value = Strategy.obtain_pairs_number(string_list)
 
         'Assert'
         self.assertEqual(expected_value, current_value)
@@ -76,7 +77,7 @@ class EvaluateTestCases(unittest.TestCase):
         expected_value = 1
 
         'Act'
-        current_value = obtain_pairs_number(string_list)
+        current_value = Strategy.obtain_pairs_number(string_list)
 
         'Assert'
         self.assertEqual(expected_value, current_value)
@@ -92,7 +93,7 @@ class EvaluateTestCases(unittest.TestCase):
         expected_value = 2
 
         'Act'
-        current_value = obtain_pairs_number(string_list)
+        current_value = Strategy.obtain_pairs_number(string_list)
 
         'Assert'
         self.assertEqual(expected_value, current_value)
@@ -108,7 +109,7 @@ class EvaluateTestCases(unittest.TestCase):
         expected_value = 2
 
         'Act'
-        current_value = obtain_pairs_number(string_list)
+        current_value = Strategy.obtain_pairs_number(string_list)
 
         'Assert'
         self.assertEqual(expected_value, current_value)
@@ -124,7 +125,7 @@ class EvaluateTestCases(unittest.TestCase):
         expected_value = 5
 
         'Act'
-        current_value = obtain_pairs_number(string_list)
+        current_value = Strategy.obtain_pairs_number(string_list)
 
         'Assert'
         self.assertEqual(expected_value, current_value)

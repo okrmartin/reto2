@@ -11,13 +11,13 @@ class Strategy:
         """
         current_pairs = self.obtain_pairs_number(string_list)
         punctuation = self.target_pairs - current_pairs
-        if punctuation < 0:
-            punctuation = 99999
         return punctuation
 
-    def obtain_pairs_number(self, string_list):
+    @staticmethod
+    def obtain_pairs_number(string_list):
         """
         Otains the number of couples in the list
+        :rtype: integer
         :param string_list: is a character list. This chars should be 'A' or 'B'
         :return: the number of couples in the current list of chars
         """

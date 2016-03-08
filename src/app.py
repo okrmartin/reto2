@@ -19,22 +19,22 @@ def main(argv):
             try:
                 n = int(arg)
             except:
-                print 'The -n parameter should be a number'
+                print 'The -n parameter should be an integer number'
                 sys.exit(2)
 
             if any([n <= 0, n >= 50]):
-                print 'n shoul be positive and lower than 51'
+                print 'n should be positive and lower than 51'
                 sys.exit()
 
         elif opt == '-k':
             try:
                 k = int(arg)
             except:
-                print 'The -k parameter should be a number'
+                print 'The -k parameter should be an integer number'
                 sys.exit(2)
 
-            if any([k < 0, k >= (1 + (n * ((n - 1) / 2)))]):
-                print 'k shoul be positive and lower than (1 + (n * ((n - 1)/2)))'
+            if any([k < 0, k > (1 + (n * ((n - 1) / 2)))]):
+                print 'k should be positive and lower than (1 + (n * ((n - 1)/2)))'
                 sys.exit()
 
     print 'n: ', n
